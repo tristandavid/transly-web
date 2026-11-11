@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><title>send</title><script>
+const names=["transly-1.2-ipad-1-record.png","transly-1.2-ipad-2-camera.png","transly-1.2-ipad-3-transcript.png","transly-1.2-ipad-4-library.png"];
+(async()=>{const t=window.opener||window.parent;for(const n of names){const b=await (await fetch(n,{cache:"no-store"})).arrayBuffer();t.postMessage({tsShot:n,buf:b},"*")}t.postMessage({tsDone:1},"*")})();
+</script>
